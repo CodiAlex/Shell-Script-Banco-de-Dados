@@ -1,0 +1,24 @@
+#!/bin/bash 
+# By Alexandre.
+
+# Número da linha referente ao programa
+linha_do_programa=$(cat Ref | grep -n $1 | awk -F":" '{print $1}')
+
+ 
+   while : ; do 
+
+linha_do_programa=$(($linha_do_programa+1))
+
+# Quebrar loop se achar a linha --- 
+
+  saida_de_sed=$(sed -n "$linha_do_programa p" Ref) 
+
+       if [ "$saida_de_sed" == --- ] ; then 
+           break
+       fi 
+
+# Executar a saida de sed 
+         $(sed -n "$linha_do_programa p" Ref)
+
+       
+ done 
