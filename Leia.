@@ -24,3 +24,24 @@ Terminado instalado.
 Extraindo pacote.
 Instalando pacote.
 Pacote instalado com sucesso.
+
+Outro exemplo:
+
+Olá , olá - comandos 
+echo Tudo bem?
+---
+Como vai , como vai - comandos
+echo vou bem
+---
+
+ ./Script_name Olá
+Tudo bem?
+./Script_name Como vai?
+vou bem
+./Script_name olá
+Tudo bem?
+./Script_name como vai?
+vou bem
+
+
+
